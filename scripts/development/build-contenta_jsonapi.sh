@@ -61,7 +61,7 @@ echo "-----------------------------------------------"
 echo " Installing Contenta CMS for local usage "
 echo "-----------------------------------------------"
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y\n\n"
-$DRUSH si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y install_configure_form.enable_update_status_module=NULL install_configure_form.enable_update_status_emails=NULL
+$DRUSH si contenta_jsonapi install_configure_form.enable_update_status_module=NULL install_configure_form.enable_update_status_emails=NULL --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
 if [ $? -ne 0 ]; then
   echo -e "${FG_C}${EBG_C} ERROR ${NO_C} The Drupal installer failed to install Contenta CMS."
   exit 3
